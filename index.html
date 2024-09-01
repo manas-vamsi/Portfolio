@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manasa Vamsi - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-nav li {
+            display: inline;
+        }
+
+        .navbar .nav-link {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            padding: 15px 20px;
+            display: block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar .nav-link:hover {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        /* Smooth scroll effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 0;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .about-content {
+            max-width: 600px;
+            margin-left: 20px;
+            text-align: left;
+        }
+
+        .about-content h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 60px 0;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        .projects .section-title {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            margin-bottom: 30px;
+        }
+
+        .card img {
+            border-radius: 10px;
+        }
+
+        .card-body {
+            text-align: left;
+        }
+
+        .card-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 60px 0;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .skills .section-title {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .skill-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .skill-icon {
+            max-width: 80px;
+            margin-bottom: 10px;
+        }
+
+        .skill-item h5 {
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Contact Me Section */
+        .contact-me {
+            padding: 50px 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .contact-description {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: block;
+            margin: 0 auto 20px;
+            text-align: center;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact-icon {
+            max-width: 80px;
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            font-size: 16px;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .contact-item:hover p {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Manasa Vamsi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact-me" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section (Anchor for Home Link) -->
+    <section id="home">
+        <!-- This section could contain a hero banner, intro, or be empty -->
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/about/1.jpg" alt="Manasa Vamsi">
+            </div>
+            <div class="about-content">
+                <h1>About Me</h1>
+                <p>Hi, I'm Manasa Vamsi, a passionate Electronics and Communication Engineering student from NIT Andhra Pradesh. I specialize in designing and developing cutting-edge solutions in both hardware and software. My journey in engineering has been fueled by my curiosity and love for technology. I am constantly seeking new challenges and opportunities to apply my skills in innovative ways.</p>
+                <p>When I'm not immersed in coding or circuit design, you can find me exploring the latest trends in UI/UX design or working on personal projects that blend creativity with technical expertise.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h1 class="section-title">My Projects</h1>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/projects/1.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Title 1</h5>
+                            <p class="card-text">A brief description of the project goes here. Highlight the key features or technologies used.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Title 2</h5>
+                            <p class="card-text">A brief description of the project goes here. Highlight the key features or technologies used.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Project Title 3</h5>
+                            <p class="card-text">A brief description of the project goes here. Highlight the key features or technologies used.</p>
+                            <a href="#" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h1 class="section-title">My Skills</h1>
+            <div class="row">
+                <!-- Skill 1 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="skill-item">
+                        <img src="images/skills/1.png" alt="Skill 1" class="skill-icon">
+                        <h5>Python</h5>
+                    </div>
+                </div>
+                <!-- Skill 2 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="skill-item">
+                        <img src="images/skills/2.png" alt="Skill 2" class="skill-icon">
+                        <h5>SQL</h5>
+                    </div>
+                </div>
+                <!-- Skill 3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="skill-item">
+                        <img src="images/skills/3.png" alt="Skill 3" class="skill-icon">
+                        <h5>Power Bi</h5>
+                    </div>
+                </div>
+                <!-- Skill 4 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="skill-item">
+                        <img src="images/skills/4.png" alt="Skill 4" class="skill-icon">
+                        <h5>HTML</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="skill-item">
+                        <img src="images/skills/5.png" alt="Skill 5" class="skill-icon">
+                        <h5>CSS</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="skill-item">
+                        <img src="images/skills/6.png" alt="Skill 5" class="skill-icon">
+                        <h5>Java Script</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section class="contact-me" id="contact-me">
+        <div class="container">
+            <h1 class="section-title">Contact Me</h1>
+            <p class="contact-description">Feel free to reach out to me through any of the platforms below!</p>
+            <div class="row">
+                <!-- LinkedIn -->
+                <div class="col-md-2 col-sm-4 col-6">
+                    <a href="https://www.linkedin.com/in/manasvamsi" target="_blank" class="contact-item">
+                        <img src="icons/linkedin.png" alt="LinkedIn" class="contact-icon">
+                        <p>LinkedIn</p>
+                    </a>
+                </div>
+                <!-- Twitter -->
+                <div class="col-md-2 col-sm-4 col-6">
+                    <a href="https://www.instagram.com/" target="_blank" class="contact-item">
+                        <img src="icons/instagram.png" alt="Instagram" class="contact-icon">
+                        <p>Instagram</p>
+                    </a>
+                </div>
+                <!-- GitHub -->
+                <div class="col-md-2 col-sm-4 col-6">
+                    <a href="https://github.com/manas-vamsi" target="_blank" class="contact-item">
+                        <img src="icons/github.png" alt="GitHub" class="contact-icon">
+                        <p>GitHub</p>
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <a href="mailto:manasvamsi88@gmail.com" target="_blank" class="contact-item">
+                        <img src="icons/gmail.png" alt="Gmail" class="contact-icon">
+                        <p>Gmail</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript for smooth scrolling in older browsers -->
+    <script>
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
