@@ -269,48 +269,12 @@
         }
 
         /* Popup Styling */
-        #welcomePopup {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 2000;
-        }
-
-        #welcomePopup .popup-content {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            max-width: 400px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        }
-
-        #welcomePopup .popup-content h2 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #333;
-        }
-
-        #welcomePopup .popup-content p {
-            font-size: 18px;
-            color: #666;
-        }
+        
     </style>
 </head>
 <body>
     <!-- Welcome Popup -->
-    <div id="welcomePopup">
-        <div class="popup-content">
-            <h2>Hi, welcome to my world!</h2>
-            <p>Press "Enter" to explore my portfolio.</p>
-        </div>
-    </div>
+    
 
     <!-- Sticky Navbar -->
     <nav class="navbar navbar-expand-lg">
@@ -517,15 +481,6 @@
         </div>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var welcomePopup = document.getElementById('welcomePopup');
-            document.addEventListener('keydown', function (event) {
-                if (event.key === 'Enter') {
-                    welcomePopup.style.display = 'none';
-                }
-            });
-        });
-    </script>
+    
 </body>
 </html>
