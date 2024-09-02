@@ -9,10 +9,10 @@
     <style>
         /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
         }
 
         /* Navbar styling */
@@ -20,13 +20,15 @@
             position: sticky;
             top: 0;
             width: 100%;
-            background-color: #333;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
 
         .navbar .container {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
         }
 
@@ -44,16 +46,15 @@
 
         .navbar .nav-link {
             text-decoration: none;
-            color: #ffffff;
+            color: #333;
             font-size: 16px;
             padding: 15px 20px;
             display: block;
-            transition: background-color 0.3s, color 0.3s;
+            transition: color 0.3s;
         }
 
         .navbar .nav-link:hover {
-            background-color: #007bff;
-            color: #ffffff;
+            color: #007bff;
         }
 
         /* Smooth scroll effect */
@@ -61,88 +62,157 @@
             scroll-behavior: smooth;
         }
 
+        /* Home Section */
+        #home {
+            background: url('images/home-bg.jpg') no-repeat center center/cover;
+            height: 70vh;
+            color: #ffffff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgba(0, 123, 255, 0.5);
+        }
+
+        #home h1 {
+            font-size: 48px;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        #home p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
         /* About Section */
         .about {
-            padding: 60px 0;
+            padding: 80px 0;
             background-color: #ffffff;
             text-align: center;
         }
 
         .about-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
+            flex-wrap: wrap;
         }
 
         .about-image img {
             max-width: 100%;
-            border-radius: 10px;
+            border-radius: 5px;
         }
 
         .about-content {
             max-width: 600px;
-            margin-left: 20px;
+            margin: 20px;
             text-align: left;
         }
 
         .about-content h1 {
-            font-size: 32px;
+            font-size: 36px;
             color: #333;
             margin-bottom: 20px;
         }
 
         .about-content p {
-            font-size: 16px;
+            font-size: 18px;
             color: #666;
-            line-height: 1.6;
+            line-height: 1.8;
+        }
+
+        /* Work Experience Section */
+        .work-experience {
+            padding: 80px 0;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        .work-experience .section-title {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .work-experience p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         /* Projects Section */
         .projects {
-            padding: 60px 0;
-            background-color: #f8f8f8;
+            padding: 80px 0;
+            background-color: #f1f1f1;
             text-align: center;
         }
 
         .projects .section-title {
-            font-size: 32px;
+            font-size: 36px;
             color: #333;
             margin-bottom: 40px;
         }
 
         .card {
-            margin-bottom: 30px;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
         .card img {
-            border-radius: 10px;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .card-body {
             text-align: left;
+            padding: 20px;
         }
 
         .card-title {
-            font-size: 20px;
+            font-size: 24px;
             margin-bottom: 15px;
+            color: #333;
         }
 
         .card-text {
-            font-size: 14px;
+            font-size: 16px;
             color: #666;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
         }
 
         /* Skills Section */
         .skills {
-            padding: 60px 0;
+            padding: 80px 0;
             background-color: #ffffff;
             text-align: center;
         }
 
         .skills .section-title {
-            font-size: 32px;
+            font-size: 36px;
             color: #333;
             margin-bottom: 40px;
         }
@@ -153,24 +223,24 @@
         }
 
         .skill-icon {
-            max-width: 80px;
-            margin-bottom: 10px;
+            max-width: 100px;
+            margin-bottom: 15px;
         }
 
         .skill-item h5 {
-            font-size: 16px;
+            font-size: 18px;
             color: #333;
         }
 
         /* Contact Me Section */
         .contact-me {
-            padding: 50px 0;
-            background-color: #f4f4f4;
+            padding: 80px 0;
+            background-color: #f9f9f9;
             text-align: center;
         }
 
         .contact-description {
-            font-size: 18px;
+            font-size: 20px;
             color: #666;
             margin-bottom: 40px;
         }
@@ -184,12 +254,12 @@
         }
 
         .contact-icon {
-            max-width: 80px;
-            margin-bottom: 10px;
+            max-width: 100px;
+            margin-bottom: 15px;
         }
 
         .contact-item p {
-            font-size: 16px;
+            font-size: 18px;
             color: #333;
             margin-top: 5px;
         }
@@ -197,13 +267,55 @@
         .contact-item:hover p {
             color: #007bff;
         }
+
+        /* Popup Styling */
+        #welcomePopup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        #welcomePopup .popup-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #welcomePopup .popup-content h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        #welcomePopup .popup-content p {
+            font-size: 18px;
+            color: #666;
+        }
     </style>
 </head>
 <body>
+    <!-- Welcome Popup -->
+    <div id="welcomePopup">
+        <div class="popup-content">
+            <h2>Hi, welcome to my world!</h2>
+            <p>Press "Enter" to explore my portfolio.</p>
+        </div>
+    </div>
+
     <!-- Sticky Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#home">Manasa Vamsi</a>
+            <a class="navbar-brand" href="#home"> Bade Manasa Vamsi</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -216,73 +328,85 @@
                         <a href="#about" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#projects" class="nav-link">Projects</a>
+                        <a href="#work-experience" class="nav-link">Work Experience</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#skills" class="nav-link">Skills</a>
+                        <a href="#projects" class="nav-link">projects</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact-me" class="nav-link">Contact</a>
+                        <a href="#skills" class="nav-link">skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Home Section (Anchor for Home Link) -->
+    <!-- Home Section -->
     <section id="home">
-        <!-- This section could contain a hero banner, intro, or be empty -->
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my work and skills</p>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="images/about/1.jpg" alt="Manasa Vamsi">
+    <section id="about" class="about-section mb-5" data-aos="fade-up">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 about-content text-center">
+                    <h2>About Me</h2>
+                    <p>Hello! I’m Manasa Vamsi, a recent graduate from NIT Andhra Pradesh with a degree in Electronics and Communication Engineering. I’m passionate about leveraging technology to solve complex problems and am particularly interested in web development and data science.</p>
+                    <p>I have developed strong skills in programming languages such as Python and SQL, and I am proficient in tools like Jupyter Notebook, VS Code, and Power BI. My certifications in Data Science, Database Management system are from platforms like NPTEL.</p>
+                    <p>I am continuously exploring new technologies and methodologies to stay at the forefront of the industry. My portfolio showcases a selection of my work and skills, reflecting my dedication to innovation and excellence.</p>
+                    <p>I’m excited about the opportunity to bring my skills to a dynamic team where I can contribute meaningfully and continue to grow professionally.Thank you for visiting my portfolio. I look forward to connecting and exploring potential opportunities.<a href="file:///C:/Users/manas/OneDrive/Documents/Bade%20Manasa%20Vamsi.pdf" class="btn btn-primary">Resume</a></p>
+                    <img src="images/about/1.jpg" alt="About Image">
+                </div>
             </div>
-            <div class="about-content">
-                <h1>About Me</h1>
-                <p>Hi, I'm Manasa Vamsi, a passionate Electronics and Communication Engineering student from NIT Andhra Pradesh. I specialize in designing and developing cutting-edge solutions in both hardware and software. My journey in engineering has been fueled by my curiosity and love for technology. I am constantly seeking new challenges and opportunities to apply my skills in innovative ways.</p>
-                <p>When I'm not immersed in coding or circuit design, you can find me exploring the latest trends in UI/UX design or working on personal projects that blend creativity with technical expertise.</p>
-            </div>
-        </div>
+        </div>                
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="work-experience" class="work-experience">
+        <h2 class="section-title">Data Scientist Intern</h2>
+        <p>Led the "Custom Object Detection" project, creating and managing critical data files for training and
+        testing, ensuring data accuracy and organization.
+        Utilized automated tools for data extraction and cleaning, resolving coding errors, and maintaining
+        high-quality datasets. Maintained databases, streamlining data systems for efficient analysis and reporting.treamlined processes, demonstrating adaptability and direct experience in real-time project collaboration.</p>
     </section>
 
     <!-- Projects Section -->
-    <section class="projects" id="projects">
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
         <div class="container">
-            <h1 class="section-title">My Projects</h1>
             <div class="row">
-                <!-- Project 1 -->
                 <div class="col-md-4">
                     <div class="card">
                         <img src="images/projects/1.jpg" class="card-img-top" alt="Project 1">
                         <div class="card-body">
-                            <h5 class="card-title">Project Title 1</h5>
-                            <p class="card-text">A brief description of the project goes here. Highlight the key features or technologies used.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
+                            <h5 class="card-title"> COVID-19 Pneumonia Severity on a large chest X-Ray</h5>
+                            <p class="card-text"> Implemented advanced analysis techniques, contributing to the understanding of disease patterns for
+                                effective diagnosis.Tested the model’s ability to accurately predict the severity of COVID-19 Pneumonia on new and unseen chest X-ray images and comparing its performance to that of baseline models.</p>
+                                <a href="https://github.com/manas-vamsi/-COVID-19-Pneumonia-Severity-on-a-large-chest-X-Ray-" class="btn btn-primary">View Project</a>    
                         </div>
                     </div>
                 </div>
-                <!-- Project 2 -->
                 <div class="col-md-4">
                     <div class="card">
                         <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2">
                         <div class="card-body">
-                            <h5 class="card-title">Project Title 2</h5>
-                            <p class="card-text">A brief description of the project goes here. Highlight the key features or technologies used.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
+                            <h5 class="card-title">Custom object detection</h5>
+                            <p class="card-text">Streamlined processes, demonstrating adaptability and direct experience in real-time project collaboration.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Project 3 -->
                 <div class="col-md-4">
                     <div class="card">
                         <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
                         <div class="card-body">
-                            <h5 class="card-title">Project Title 3</h5>
-                            <p class="card-text">A brief description of the project goes here. Highlight the key features or technologies used.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
+                            <h5 class="card-title">EDA of Sales data</h5>
+                            <p class="card-text">Created an interactive report to visualize sales data, enabling dynamic analysis and insights into sales performance and trends.Designed user-friendly visualizations including bar charts, line graphs, tables and donut chart, providing a comprehensive view of sales metrics and regional performance</p>
+                            <a href="https://github.com/manas-vamsi/EDA-of-sales-data" class="btn btn-primary">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -291,99 +415,115 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="skills" id="skills">
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills</h2>
         <div class="container">
-            <h1 class="section-title">My Skills</h1>
             <div class="row">
-                <!-- Skill 1 -->
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4">
                     <div class="skill-item">
-                        <img src="images/skills/1.png" alt="Skill 1" class="skill-icon">
+                        <img src="images/skills/1.png" alt="Python" class="skill-icon">
                         <h5>Python</h5>
                     </div>
                 </div>
-                <!-- Skill 2 -->
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4">
                     <div class="skill-item">
-                        <img src="images/skills/2.png" alt="Skill 2" class="skill-icon">
+                        <img src="images/skills/2.png" alt="SQL" class="skill-icon">
                         <h5>SQL</h5>
                     </div>
                 </div>
-                <!-- Skill 3 -->
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4">
                     <div class="skill-item">
-                        <img src="images/skills/3.png" alt="Skill 3" class="skill-icon">
+                        <img src="images/skills/3.png" alt="Power Bi" class="skill-icon">
                         <h5>Power Bi</h5>
                     </div>
                 </div>
-                <!-- Skill 4 -->
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4">
                     <div class="skill-item">
-                        <img src="images/skills/4.png" alt="Skill 4" class="skill-icon">
+                        <img src="images/skills/4.png" alt="HTML" class="skill-icon">
                         <h5>HTML</h5>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4">
                     <div class="skill-item">
-                        <img src="images/skills/5.png" alt="Skill 5" class="skill-icon">
+                        <img src="images/skills/5.png" alt="CSS" class="skill-icon">
                         <h5>CSS</h5>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4">
                     <div class="skill-item">
-                        <img src="images/skills/6.png" alt="Skill 5" class="skill-icon">
+                        <img src="images/skills/6.png" alt="Java Script" class="skill-icon">
                         <h5>Java Script</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item">
+                        <img src="images/skills/7.png" alt="Bootstrap" class="skill-icon">
+                        <h5>Bootstrap</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item">
+                        <img src="images/skills/8.png" alt="Pandas" class="skill-icon">
+                        <h5>Pandas</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item">
+                        <img src="images/skills/9.png" alt="Numpy" class="skill-icon">
+                        <h5>Numpy</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item">
+                        <img src="images/skills/10.png" alt="MS Excel" class="skill-icon">
+                        <h5>MS Excel</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-item">
+                        <img src="images/skills/11.png" alt="Github" class="skill-icon">
+                        <h5>Github</h5>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Me Section -->
-    <section class="contact-me" id="contact-me">
+    <!-- Contact Section -->
+    <section id="contact" class="contact-me">
         <div class="container">
-            <h1 class="section-title">Contact Me</h1>
-            <p class="contact-description">Feel free to reach out to me through any of the platforms below!</p>
+            <h2 class="section-title">Contact Me</h2>
+            <p class="contact-description">Feel free to reach out to me through any of the following means:</p>
             <div class="row">
-                <!-- LinkedIn -->
-                <div class="col-md-2 col-sm-4 col-6">
-                    <a href="https://www.linkedin.com/in/manasvamsi" target="_blank" class="contact-item">
-                        <img src="icons/linkedin.png" alt="LinkedIn" class="contact-icon">
-                        <p>LinkedIn</p>
+                <div class="col-md-4">
+                    <a href="mailto:manasvamsi88@gmail.com" class="contact-item">
+                        <img src="icons/gmail.png" alt="Email Icon" class="contact-icon">
+                        <p>Email Me</p>
                     </a>
                 </div>
-                <!-- Twitter -->
-                <div class="col-md-2 col-sm-4 col-6">
-                    <a href="https://www.instagram.com/" target="_blank" class="contact-item">
-                        <img src="icons/instagram.png" alt="Instagram" class="contact-icon">
-                        <p>Instagram</p>
+                <div class="col-md-4">
+                    <a href="https://www.linkedin.com/in/manasvamsi/" class="contact-item">
+                        <img src="icons/linkedin.png" alt="LinkedIn Icon" class="contact-icon">
+                        <p>Connect on LinkedIn</p>
                     </a>
                 </div>
-                <!-- GitHub -->
-                <div class="col-md-2 col-sm-4 col-6">
-                    <a href="https://github.com/manas-vamsi" target="_blank" class="contact-item">
-                        <img src="icons/github.png" alt="GitHub" class="contact-icon">
-                        <p>GitHub</p>
-                    </a>
-                </div>
-                <div class="col-md-2 col-sm-4 col-6">
-                    <a href="mailto:manasvamsi88@gmail.com" target="_blank" class="contact-item">
-                        <img src="icons/gmail.png" alt="Gmail" class="contact-icon">
-                        <p>Gmail</p>
+                <div class="col-md-4">
+                    <a href="https://github.com/manas-vamsi" class="contact-item">
+                        <img src="icons/github.png" alt="Github Icon" class="contact-icon">
+                        <p>Check Me</p>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Optional JavaScript for smooth scrolling in older browsers -->
     <script>
-        document.querySelectorAll('.nav-link').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        document.addEventListener('DOMContentLoaded', function () {
+            var welcomePopup = document.getElementById('welcomePopup');
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter') {
+                    welcomePopup.style.display = 'none';
+                }
             });
         });
     </script>
